@@ -1,14 +1,14 @@
-import panqueca from "../imagens/panquecas";
-import mousseDeMorango from "../imagens/mousse_de_morango";
-import pastelVegano from "../imagens/pizza_vegetal";
-import pizzaVegetariana from "../imagens/pizza_vegetal"
-import vinho from "../imagens/vinho";
-import laranja from "../imagens/laranja";
+import "../imagens/panquecas";
+import "../imagens/mousse_de_morango";
+import "../imagens/pastel_vegano";
+import "../imagens/pizza_vegetal"
+import "../imagens/vinho";
+import "../imagens/laranja.svg";
 
 export const products = [
     {  
         id: 1,
-        imagem: panqueca,
+        imagem: "panquecas.svg",
         nome: "Panqueca de banana com aveia",
         descricao: "Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito.",
         categoria: "Panificadora",
@@ -16,7 +16,7 @@ export const products = [
     },
     {  
         id: 2,
-        imagem: mousseDeMorango,
+        imagem: "mousse_de_morango.svg",
         nome: "Mousse de morango com a fruta",
         descricao: "Sobremesa fácil, rápida e muito saborosa: o mousse.",
         categoria: "Frutas",
@@ -24,7 +24,7 @@ export const products = [
     },
     {  
         id: 3,
-        imagem: pastelVegano,
+        imagem: "pastel_vegano.svg",
         nome: "Pastel de verduras vagano",
         descricao: "Que tal comer um delicioso pastel feito de vegetais cozidos no vapor.",
         categoria: "Panificadora",
@@ -32,7 +32,7 @@ export const products = [
     },
     {  
         id: 4,
-        imagem: pizzaVegetariana,
+        imagem: "pizza_vegetal.svg",
         nome: "Pizza vegetariana de palmito",
         descricao: "Uma saborosa pizza de massa fina feita de palmito ralado, com cebola, ovos cozidos, oregano e manjericão.",
         categoria: "Panificadora",
@@ -40,7 +40,7 @@ export const products = [
     },
     {  
         id: 5,
-        imagem: vinho,
+        imagem: "vinho.svg",
         nome: "Vinho suave",
         descricao: "O vinho tinto seco. De corpo médio cheio de sabores de frutas vermelhas maduras e delicadas notas de especiarias.",
         categoria: "Bebidas",
@@ -48,7 +48,7 @@ export const products = [
     },
     {  
         id: 6,
-        imagem: laranja,
+        imagem: "laranja.svg",
         nome: "Pizza vegetariana de palmito",
         descricao: "Bastante popular no Brasil, a laranja é uma das maiores representantes das frutas cítricas. Seu sabor costuma ser doce ou levemente ácido.",
         categoria: "Frutas",
