@@ -1,15 +1,7 @@
-const panquecas = require("../imagens/panquecas.svg");
-const mousseDeMorango = require("../imagens/mousse_de_morango");
-const pastelVegano = require("../imagens/pastel_vegano");
-const pizzaVegetal = require( "../imagens/pizza_vegetal");
-const vinho = require("../imagens/vinho");
-const laranja = require("../imagens/laranja");
-import { IProduct } from  "../interfaces/products.interface";
-
-export const products: IProduct[] = [
+export const products = [
     {  
         id: 1,
-        imagem: panquecas,
+        imagem: "https://banco-de-imagens.vercel.app/static/media/panquecas.b06e6436ab5490f93f0509b0c91ee15c.svg",
         nome: "Panqueca de banana com aveia",
         descricao: "Esta receita serve muito bem 2 pessoas, deixa a gente bem satisfeito.",
         categoria: "Panificadora",
@@ -17,7 +9,7 @@ export const products: IProduct[] = [
     },
     {  
         id: 2,
-        imagem: mousseDeMorango,
+        imagem: "https://banco-de-imagens.vercel.app/static/media/mousse_de_morango.6246f94fdc433d0678ad32eca2172289.svg",
         nome: "Mousse de morango com a fruta",
         descricao: "Sobremesa fácil, rápida e muito saborosa: o mousse.",
         categoria: "Frutas",
@@ -25,7 +17,7 @@ export const products: IProduct[] = [
     },
     {  
         id: 3,
-        imagem: pastelVegano,
+        imagem: "https://banco-de-imagens.vercel.app/static/media/pastel_vegano.a5a8adc8d2a691e31ce43e377f125511.svg",
         nome: "Pastel de verduras vagano",
         descricao: "Que tal comer um delicioso pastel feito de vegetais cozidos no vapor.",
         categoria: "Panificadora",
@@ -33,7 +25,7 @@ export const products: IProduct[] = [
     },
     {  
         id: 4,
-        imagem: pizzaVegetal,
+        imagem: "https://banco-de-imagens.vercel.app/static/media/pizza_vegetal.16f8f1e49e825109a59fcb1b86a2a42a.svg",
         nome: "Pizza vegetariana de palmito",
         descricao: "Uma saborosa pizza de massa fina feita de palmito ralado, com cebola, ovos cozidos, oregano e manjericão.",
         categoria: "Panificadora",
@@ -41,7 +33,7 @@ export const products: IProduct[] = [
     },
     {  
         id: 5,
-        imagem: vinho,
+        imagem: "https://banco-de-imagens.vercel.app/static/media/vinho.35f69f56bba43f368616a57baeabe268.svg",
         nome: "Vinho suave",
         descricao: "O vinho tinto seco. De corpo médio cheio de sabores de frutas vermelhas maduras e delicadas notas de especiarias.",
         categoria: "Bebidas",
@@ -49,7 +41,7 @@ export const products: IProduct[] = [
     },
     {  
         id: 6,
-        imagem: laranja,
+        imagem: "https://banco-de-imagens.vercel.app/static/media/laranja.1e426bc6b932dfbb819bb7091ca665c0.svg",
         nome: "Pizza vegetariana de palmito",
         descricao: "Bastante popular no Brasil, a laranja é uma das maiores representantes das frutas cítricas. Seu sabor costuma ser doce ou levemente ácido.",
         categoria: "Frutas",

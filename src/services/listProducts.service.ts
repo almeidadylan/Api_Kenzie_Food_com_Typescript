@@ -1,4 +1,4 @@
-const products = require("../database/index")
+import { products } from "../database";
 
 const listProductsService = () => {
     return products
