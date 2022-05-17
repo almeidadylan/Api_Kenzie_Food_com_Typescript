@@ -1,12 +1,12 @@
 {
   "name": "node",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "src/index.js",
   "repository": "git@github.com:almeidadylan/Api_Kenzie_Food_com_Typescript.git",
   "author": "almeidadylan <almeidadylan793@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index.ts"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "express": "^4.18.1"
