@@ -1,4 +1,6 @@
-export const products = [
+import { IProducts } from "../interfaces/productsInterfaces"
+
+export const products: IProducts[] = [
     {  
         id: 1,
         imagem: "https://banco-de-imagens.vercel.app/static/media/panquecas.b06e6436ab5490f93f0509b0c91ee15c.svg",
