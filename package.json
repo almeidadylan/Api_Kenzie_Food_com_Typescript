@@ -6,7 +6,7 @@
   "author": "almeidadylan <almeidadylan793@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon src/index.ts"
+    "start": "node src/index.ts"
   },
   "dependencies": {
     "express": "^4.18.1"
