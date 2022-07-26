@@ -7,7 +7,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc index.ts dist/",
     "start": "ts-node-dev ./dist/src/index.js"
   },
   "dependencies": {
