@@ -8,13 +8,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const listProducts_service_1 = __importDefault(require("../services/listProducts.service"));
-const listProductsController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const products = yield (0, listProducts_service_1.default)();
-    return res.status(200).json(products);
-});
-exports.default = listProductsController;
+exports.initialMigration1661556483891 = void 0;
+class initialMigration1661556483891 {
+    up(queryRunner) {
+        return __awaiter(this, void 0, void 0, function* () {
+        });
+    }
+    down(queryRunner) {
+        return __awaiter(this, void 0, void 0, function* () {
+        });
+    }
+}
+exports.initialMigration1661556483891 = initialMigration1661556483891;

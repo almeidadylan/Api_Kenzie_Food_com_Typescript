@@ -12,9 +12,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const listProducts_service_1 = __importDefault(require("../services/listProducts.service"));
-const listProductsController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const products = yield (0, listProducts_service_1.default)();
-    return res.status(200).json(products);
+const data_source_1 = require("../data-source");
+const Product_1 = __importDefault(require("../models/Product"));
+;
+const CreateProductService = (data) => __awaiter(void 0, void 0, void 0, function* () {
+    const productRepository = data_source_1.AppDataSource.getRepository(Product_1.default);
+    const product = productRepository.create(data);
+    yield productRepository.save(product);
+    return product;
 });
-exports.default = listProductsController;
+exports.default = CreateProductService;

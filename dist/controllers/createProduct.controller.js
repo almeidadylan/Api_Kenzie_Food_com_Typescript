@@ -12,9 +12,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const listProducts_service_1 = __importDefault(require("../services/listProducts.service"));
-const listProductsController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const products = yield (0, listProducts_service_1.default)();
-    return res.status(200).json(products);
+const createProduct_service_1 = __importDefault(require("../services/createProduct.service"));
+const CreateProductController = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { imagem, nome, descricao, categoria, preco } = req.body;
+        const product = yield (0, createProduct_service_1.default)({
+            imagem, nome, descricao, categoria, preco
+        });
+        return res.status(200).json(product);
+    }
+    catch (err) {
+        if (err instanceof Error) {
+        }
+    }
 });
-exports.default = listProductsController;
+exports.default = CreateProductController;

@@ -1,6 +1,11 @@
-import { products } from "../database";
+import { AppDataSource } from "../data-source";
+import Product from "../models/Product";
 
-const listProductsService = () => {
+const listProductsService = async () => {
+    const productRepository = AppDataSource.getRepository(Product)
+
+    const products = await productRepository.find() 
+
     return products
 };
 

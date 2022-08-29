@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  api_express:
+    container_name: api_kenzie_food 
+    image: node:16
+    build: .
+    ports:
+      - 3000:3000
+
+    depends_on: 
+      - db
+
+  db:
+    container_name: db_api_kenzie_food
+    image: postgres:12
+    ports:
+      - 5433:5432
+    environment: 
+      - POSTGRES_USER=process.env.POSTGRES_USER
+      - POSTGRES_PASSWORD=process.env.POSTGRES_PASSWORD
+      - POSTGRES_DB=process.env.POSTGRES_DB

@@ -7,4 +7,5 @@ const express_1 = require("express");
 const listProducts_controller_1 = __importDefault(require("../controllers/listProducts.controller"));
 const routes = (0, express_1.Router)();
 routes.get("/products", listProducts_controller_1.default);
+routes.post("/products");
 exports.default = routes;
