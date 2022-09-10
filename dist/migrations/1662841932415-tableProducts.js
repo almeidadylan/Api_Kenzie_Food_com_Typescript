@@ -9,22 +9,20 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createProductsTable1661557742505 = void 0;
-class createProductsTable1661557742505 {
+exports.tableProducts1662841932415 = void 0;
+class tableProducts1662841932415 {
     constructor() {
-        this.name = 'createProductsTable1661557742505';
+        this.name = 'tableProducts1662841932415';
     }
     up(queryRunner) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield queryRunner.query(`CREATE SEQUENCE IF NOT EXISTS "product_id_seq" OWNED BY "product"."id"`);
-            yield queryRunner.query(`ALTER TABLE "product" ALTER COLUMN "id" SET DEFAULT nextval('"product_id_seq"')`);
+            yield queryRunner.query(`CREATE TABLE "product" ("id" SERIAL NOT NULL, "imagem" character varying NOT NULL, "nome" character varying NOT NULL, "descricao" character varying NOT NULL, "categoria" character varying NOT NULL, "preco" double precision NOT NULL, CONSTRAINT "PK_bebc9158e480b949565b4dc7a82" PRIMARY KEY ("id"))`);
         });
     }
     down(queryRunner) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield queryRunner.query(`ALTER TABLE "product" ALTER COLUMN "id" DROP DEFAULT`);
-            yield queryRunner.query(`DROP SEQUENCE "product_id_seq"`);
+            yield queryRunner.query(`DROP TABLE "product"`);
         });
     }
 }
-exports.createProductsTable1661557742505 = createProductsTable1661557742505;
+exports.tableProducts1662841932415 = tableProducts1662841932415;
