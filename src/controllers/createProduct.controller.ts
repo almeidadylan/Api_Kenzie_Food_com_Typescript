@@ -13,7 +13,7 @@ const CreateProductController = async (req: Request, res: Response) => {
     }
     catch (err) {
         if ( err instanceof Error ) {
-            
+            return res.status(400).json({ error: err.message })
         }
     }
 

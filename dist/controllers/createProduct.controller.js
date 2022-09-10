@@ -23,6 +23,7 @@ const CreateProductController = (req, res) => __awaiter(void 0, void 0, void 0, 
     }
     catch (err) {
         if (err instanceof Error) {
+            return res.status(400).json({ error: err.message });
         }
     }
 });

@@ -10,7 +10,7 @@ app.use(cors())
 
 app.use(express.json());
 
-app.use("", routesProducts);
+app.use(routesProducts);
 
 app.listen(port, () => {
     console.log(`app rodando na porta ${port}`);
