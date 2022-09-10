@@ -6,14 +6,16 @@ require("dotenv/config");
 exports.AppDataSource = new typeorm_1.DataSource({
     type: "postgres",
     host: "localhost",
-    port: 5432,
+    port: 5433,
+    url: process.env.DATABASE_URL,
+    ssl: process.env.NODE_ENV === "production" ? { rejectUnauthorized: false } : false,
     username: process.env.POSTGRES_USER,
     password: process.env.POSTGRES_PASSWORD,
     database: process.env.POSTGRES_DB,
     synchronize: false,
     logging: true,
-    entities: ["src/models/*.ts"],
-    migrations: ["src/migrations/*.ts"],
+    entities: process.env.NODE_ENV === "production" ? ["dist/models/*.js"] : ["src/models/*.ts"],
+    migrations: process.env.NODE_ENV === "production" ? ["dist/migrations/*.js"] : ["src/migrations/*.ts"],
 });
 exports.AppDataSource.initialize()
     .then(() => {
