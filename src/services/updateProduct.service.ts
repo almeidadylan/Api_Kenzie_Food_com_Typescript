@@ -11,7 +11,6 @@ const UpdateProductService = async (id: string, imagem: string, nome: string, de
     if ( product === null) {
         throw new Error
     }
-    console.log(product)
 
     product?.imagem ? (product.imagem = imagem) : (product?.imagem);
     product?.nome ? (product.nome = nome) : (product?.nome);
