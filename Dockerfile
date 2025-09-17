@@ -8,12 +8,12 @@ EXPOSE 3000
 
 WORKDIR /app
 
-COPY ["package.json", "yarn.lock"] .
+COPY ["package.json", "package-lock.json"] .
 
 USER node
 
-RUN yarn 
+RUN npm install 
 
 COPY . .
 
-CMD ["yarn", "start"]
+CMD ["npm", "start"]

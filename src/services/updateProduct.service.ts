@@ -1,8 +1,8 @@
 import { AppDataSource } from "../data-source";
-import Product from "../models/Product";
+import Product from "../models/Products";
 
 
-const UpdateProductService = async (id: string, imagem: string, nome: string, descricao: string, categoria: string, preco: number) => {
+const UpdateProductService = async (id: string, image: string, name: string, description: string, category: string, price: number) => {
     const productRepository = AppDataSource.getRepository(Product);
     const identificator: number = parseInt(id)
 
@@ -12,11 +12,11 @@ const UpdateProductService = async (id: string, imagem: string, nome: string, de
         throw new Error
     }
 
-    product?.imagem ? (product.imagem = imagem) : (product?.imagem);
-    product?.nome ? (product.nome = nome) : (product?.nome);
-    product?.descricao ? (product.descricao = descricao) : (product?.descricao);
-    product?.categoria ? (product.categoria = categoria) : (product?.categoria);
-    product?.preco ? (product.preco = preco) : (product?.preco);    
+    product?.image ? (product.image = image) : (product?.image);
+    product?.name ? (product.name = name) : (product?.name);
+    product?.description ? (product.description = description) : (product?.description);
+    product?.category ? (product.category = category) : (product?.category);
+    product?.price ? (product.price = price) : (product?.price);    
 
     return productRepository.save(product);
 };

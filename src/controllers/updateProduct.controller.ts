@@ -5,9 +5,9 @@ import UpdateProductService from "../services/updateProduct.service";
 const UpdateProductController = async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
-        const { imagem, nome, descricao, categoria, preco } = req.body;
+        const { image, name, description, category, price } = req.body;
 
-        const product = await UpdateProductService(id, imagem, nome, descricao, categoria, preco);
+        const product = await UpdateProductService(id, image, name, description, category, price);
 
         return res.status(200).json(product)
     }

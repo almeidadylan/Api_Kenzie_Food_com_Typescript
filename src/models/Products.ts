@@ -1,24 +1,24 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity()
-class Product {
+class Products {
     @PrimaryGeneratedColumn()
     id: number;
 
     @Column()
-    imagem: string;
+    image: string;
 
     @Column()
-    nome: string;
+    name: string;
 
     @Column()
-    descricao: string;
+    description: string;
 
     @Column()
-    categoria: string
+    category: string
 
     @Column({ type: "float"})
-    preco: number;
+    price: number;
 };
 
-export default Product;
+export default Products;

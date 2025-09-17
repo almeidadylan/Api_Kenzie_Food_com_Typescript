@@ -1,12 +1,12 @@
 import { AppDataSource } from "../data-source";
-import Product from "../models/Product";
+import Product from "../models/Products";
 
 interface ProductParams {
-    imagem: string;
-    nome: string;
-    descricao: string;
-    categoria: string;
-    preco: number;
+    image: string;
+    name: string;
+    description: string;
+    category: string;
+    price: number;
 };
 
 const CreateProductService = async (data: ProductParams) => {

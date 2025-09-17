@@ -3,10 +3,10 @@ import { Request, Response } from "express";
 
 const CreateProductController = async (req: Request, res: Response) => {
     try {
-        const { imagem, nome, descricao, categoria, preco } = req.body;
+        const { image, name, description, category, price } = req.body;
 
         const product = await CreateProductService({
-                imagem, nome, descricao, categoria, preco
+            image, name, description, category, price
         });
 
         return res.status(200).json(product)

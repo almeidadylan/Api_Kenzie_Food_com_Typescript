@@ -1,5 +1,5 @@
 import { AppDataSource } from "../data-source";
-import Product from "../models/Product";
+import Product from "../models/Products";
 
 const listProductsService = async () => {
     const productRepository = AppDataSource.getRepository(Product)
